@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.main{
+			position: relative; left: 50%; top: 200px; height: 20px; width: 200px;
+			background-color: lightblue; transform: translate(-50%); border-radius: 10px;
+		}
+		.sub{
+			position: absolute; left: 0; background-color: blue; width: 20px; height: 20px; border-radius: inherit;
+			animation: mySub 1s ease infinite alternate;
+		}
+		@keyframes mySub{
+			50%{
+				width: 200px; left: 0;
+			}
+			
+			100%{
+				width: 20px; left: 180px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="sub"></div>
+	</div>
+</body>
+</html>
