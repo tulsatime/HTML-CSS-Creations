@@ -9,7 +9,7 @@
 		}
 		.sub{
 			position: absolute; left: 0; background-color: blue; width: 20px; height: 20px; border-radius: inherit;
-			animation: mySub 1s ease infinite alternate;
+			animation: mySub 1s linear infinite alternate;
 		}
 		@keyframes mySub{
 			50%{
@@ -20,12 +20,53 @@
 				width: 20px; left: 180px;
 			}
 		}
+		.loading{
+			position: absolute; top: 235px; left: 50%; transform: translate(-50%);font-size: 20px; font-weight: bolder;
+		}
+		.loading > div{
+			display: inline-block;
+		}
+		.dots{
+			width: 5px; height: 5px; background-color: black; border-radius: 5px; animation: dots 4s steps(1) infinite;
+		}
+
+		@keyframes dots{
+			0%{background-color: black;}
+			75%{background-color: white;}
+			100%{background-color: white;}
+
+		}
+		.dot2{
+			animation-name: dot2;
+		}
+		
+		@keyframes dot2{
+			0%{background-color: white;}
+			25%{background-color: black;}
+			75%{background-color: white;}
+		}
+
+		.dot3{
+			animation-name: dot3;
+			
+		}
+		@keyframes dot3{
+			0%{background-color: white;}
+			50%{background-color: black;}
+			75%{background-color: white;}
+		}
 
 	</style>
 </head>
 <body>
 	<div class="main">
 		<div class="sub"></div>
+	</div>
+	<div class="loading">
+		<div class="text">Loading</div>
+		<div class="dots"></div>
+		<div class="dots dot2"></div>
+		<div class="dots dot3"></div>
 	</div>
 </body>
 </html>
